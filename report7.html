@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELAYS_ENTRY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        #main-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        #navbar {
+            width: 26.4%;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .form-container {
+            width: 68%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-wrapper {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        input[type="date"], input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn-container .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-container .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn-container .btn a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <div id="navbar"></div>
+        <div class="form-container">
+            <div class="form-wrapper">
+                <h1>Fill the required Values</h1>
+                <form id="dateForm">
+                    <label for="delayDate">Delay Date</label>
+                    <input type="date" id="delayDate" name="delayDate" required>
+                    <label for="fromDate">Delay From</label>
+                    <input type="time" id="fromDate" name="fromDate" required>
+                    <label for="toDate">Delay To</label>
+                    <input type="time" id="toDate" name="toDate" required>
+                    <label for="shopCode">SHOP_CODE</label>
+                    <input type="text" id="shopCode" name="shopCode" required>
+                    <label for="EQPT1">Equipment</label>
+                    <input type="text" list="Equipment" id="EQPT1" name="eqpt" placeholder="Enter here">
+                    <datalist id="Equipment">
+                        <option value="EQPT"></option>
+                        <option value="OT-5"></option>
+                        <option value="BATTERY-5"></option>
+                        <option value="TB-5"></option>
+                        <option value="CT-1"></option>
+                        <option value="CT-2"></option>
+                        <option value="LOCP"></option>
+                        <option value="OT-1"></option>
+                        <option value="OT-2"></option>
+                        <option value="OT-3"></option>
+                        <option value="BATTERY-1"></option>
+                        <option value="BATTERY-2"></option>
+                        <option value="BATTERY-3"></option>
+                        <option value="BATTERY-4"></option>
+                        <option value="RMB"></option>
+                        <option value="M/C-1"></option>
+                        <option value="M/C-2"></option>
+                        <option value="PCM"></option>
+                        <option value="F/C-3"></option>
+                        <option value="F/C-1"></option>
+                        <option value="F/C-2"></option>
+                        <option value="CONV-A"></option>
+                        <option value="CONV-B"></option>
+                        <option value="CONV-C"></option>
+                        <option value="CCM-1"></option>
+                        <option value="CCM-2"></option>
+                        <option value="CCM-3"></option>
+                        <option value="CCM-4"></option>
+                        <option value="CCM-5"></option>
+                        <option value="CCM-6"></option>
+                        <option value="CCM-7"></option>
+                        <option value="GPL-1"></option>
+                        <option value="BAR MILL"></option>
+                        <option value="MILL"></option>
+                        <option value="BRC"></option>
+                        <option value="CONV-E"></option>
+                        <option value="WBRC"></option>
+                        <option value="STKR"></option>
+                        <option value="SCR"></option>
+                        <option value="BHS"></option>
+                        <option value="HMDP CR"></option>
+                        <option value="LRS CR"></option>
+                        <option value="MCS"></option>
+                        <option value="GPL-2"></option>
+                        <option value="PSY CR"></option>
+                        <option value="SSY CR"></option>
+                        <option value="TLRS CR"></option>
+                        <option value="BSY"></option>
+                        <option value="MIXER-1"></option>
+                        <option value="MIXER-2"></option>
+                        <option value="BOILER-1"></option>
+                        <option value="BOILER-2"></option>
+                        <option value="BOILER-3"></option>
+                        <option value="BOILER-4"></option>
+                        <option value="BOILER-5"></option>
+                        <option value="BPTS"></option>
+                        <option value="COB-4"></option>
+                        <option value="GETS"></option>
+                        <option value="ISB"></option>
+                        <option value="TB-1"></option>
+                        <option value="TB-2"></option>
+                        <option value="TG-1"></option>
+                        <option value="TG-2"></option>
+                        <option value="TG-3"></option>
+                        <option value="TG-4"></option>
+                        <option value="ASU-1"></option>
+                        <option value="ASU-2"></option>
+                        <option value="ASU-3"></option>
+                        <option value="CWP-1"></option>
+                        <option value="CWP-2"></option>
+                        <option value="CWP-3"></option>
+                        <option value="CWP-4"></option>
+                        <option value="CH-1"></option>
+                        <option value="CH-2"></option>
+                        <option value="PH"></option>
+                        <option value="AP TRANSCO"></option>
+                        <option value="LBSS-"></option>
+                        <option value="LBSS-1"></option>
+                        <option value="LBSS-2"></option>
+                        <option value="LBSS-3"></option>
+                        <option value="LBSS-4"></option>
+                        <option value="LBSS-5"></option>
+                        <option value="LBSS-6"></option>
+                        <option value="ML-1"></option>
+                        <option value="ML-3"></option>
+                        <option value="FK"></option>
+                        <option value="FK-1"></option>
+                        <option value="CCP"></option>
+                        <option value="BILLET MIL"></option>
+                        <option value="M/C-3"></option>
+                        <option value="CPP"></option>
+                        <option value="CSP"></option>
+                        <option value="FK-2"></option>
+                        <option value="FK-3"></option>
+                        <option value="FK-4"></option>
+                        <option value="FK-5"></option>
+                        <option value="TBDB PLANT"></option>
+                        <option value="CONV-D"></option>
+                        <option value="TRT"></option>
+                        <option value="SK-1"></option>
+                        <option value="CPP-2"></option>
+                        <option value="CONV-F"></option>
+                        <option value="RMPP"></option>
+                        <option value="OT-4"></option>
+                        <option value="SK-2"></option>
+                        <option value="COB-5"></option>
+                        <option value="TG-5"></option>
+                        <option value="ASU-4"></option>
+                        <option value="ASU-5"></option>
+                        <option value="BOILER-6"></option>
+                        <option value="ML-2"></option>
+                        <option value="NEDO"></option>
+                        <option value="LOCP-2"></option>
+                        <option value="LBSS-7"></option>
+                        <option value="TB-4"></option>
+                    </datalist>
+                    <label for="delayDesc">Delay_Description</label>
+                    <input type="text" id="delayDesc" name="delayDesc" required>
+                    <label for="delayDuration">Delay Duration</label>
+                    <input type="time" id="delayDuration" name="delayDuration" required>
+                    <label for="continued">Delay_Continued</label>
+                    <input type="radio" name="continued" value="N" required>No<br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="btn-container">
+        <button class="btn">
+            <a href="navbar.html">Back</a>
+        </button>
+    </div>
+    <script>
+        // JavaScript to dynamically load the navbar
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        });
+
+        document.getElementById('dateForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            // Capture the form data
+            var formData = new FormData(document.getElementById('dateForm'));
+        
+            // Send data to PHP script
+            fetch('insert_delays.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Data inserted successfully');
+                } else {
+                    alert('Error inserting data: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

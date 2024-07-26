@@ -1,0 +1,268 @@
+/* import google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+.container{
+    background-image: url("https://img.freepik.com/free-photo/neon-tropical-monstera-leaf-banner_53876-138943.jpg?t=st=1718778803~exp=1718782403~hmac=615d554932afdb170b8253bcdb521fbb8c43f999bc1c84681a5db4cc752eeba1&w=826");
+    background-size: cover;
+}
+
+body{
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    color: #444;
+}
+
+.heading-container {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.heading-container h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.container{
+    display: flex;
+}
+
+nav{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 0 20px 20px 0;
+}
+
+.logo{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    margin: 10px 0;
+}
+
+nav ul li a{
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 10px;
+}
+
+nav ul li a:hover{
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a .fas{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.logout a{
+    color: #ff4d4d;
+}
+
+.logout a:hover{
+    background: #ff4d4d;
+    color: #ffffff;
+}
+
+/* Main Section */
+.main {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-top {
+    display: flex;
+    width: 100%;
+}
+
+.main-top i {
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+}
+
+.main-skills {
+    display: flex;
+    margin-top: 20px;
+}
+
+.main-skills .card {
+    width: 25%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.main-skills .card h3 {
+    margin: 10px;
+    text-transform: capitalize;
+}
+
+.main-skills .card button {
+    margin-top: 15px;
+    text-transform: capitalize;
+    background: orangered;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main-skills .card p {
+    font-size: 12px;
+}
+
+.main-skills .card button:hover {
+    background: rgb(223, 70, 15, 0.856);
+}
+
+.main-skills .card i {
+    font-size: 22px;
+    padding: 10px;
+}
+
+/* Courses */
+.main-course {
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.course-box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.course-box ul {
+    list-style: none;
+    display: flex;
+}
+
+.course-box ul li {
+    margin: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.course-box ul .active {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.course-box .course {
+    display: flex;
+}
+
+.box {
+    width: 33%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgba(235, 233, 233, 0.5);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.box p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.box button {
+    background: #000;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.box i {
+    font-size: 7rem;
+    float: right;
+    margin: -20px 20px 20px 0;
+}
+
+.html {
+    color: rgb(25, 94, 54);
+}
+
+.css {
+    color: rgb(104, 179, 35);
+}
+
+.js {
+    color: rgb(28, 98, 179);
+}
+
+.navbarimage {
+    border-radius: 10px;
+    background-size: cover;
+    height: 25px;
+    width: 45px;
+}
